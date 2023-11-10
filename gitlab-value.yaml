@@ -1,0 +1,33 @@
+  install: true
+redis:
+  install: true
+postgresql:
+  install: true
+gitlab-runner:
+  install: true
+registry:
+  enable: true
+
+
+global:
+  edition: ce
+
+  hosts:
+    domain: mechatronica-pro
+    https: true
+    gitlab: {}
+    externalIP: 192.168.122.169 #Данный ip нужно заменить на тот каторый выдал nginx
+    ssh: ~
+  minio:
+    enabled: true
+  ingress:
+    configureCertmanager: false
+    class: nginx
+    tls:
+      enabled: false
+
+  initialRootPassword:
+    key: password
+    secret: initial-admin-password
+
+
